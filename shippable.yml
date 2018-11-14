@@ -1,0 +1,14 @@
+language: none
+
+build:
+
+  pre_ci_boot:
+    image_name: drydock/u14
+    image_tag: v6.6.4
+    pull: true
+    
+  ci:   
+    - echo "base image"
+    - EXPECTED_DOCKER_VERSION="17.06.0-ce"
+    - |
+      [ $(docker version --format {{.Server.Version}}) == "$EXPECTED_DOCKER_VERSION" ]
