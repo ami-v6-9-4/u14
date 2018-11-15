@@ -14,7 +14,7 @@ build:
     - eb --version
     - gcloud version
     - jfrog --version
-    - kubectl version
+   # - kubectl version
     - packer version
     - terraform --version
     - apt search azure-cli
