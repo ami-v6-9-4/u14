@@ -1,10 +1,13 @@
 language: none
 
+runtime:
+  nodePool: dynamic__x86_64__Ubuntu_14_04__c4_large
+  
 build:
 
   pre_ci_boot:
     image_name: drydock/u14
-    image_tag: v6.1.4
+    image_tag: v6.3.4
     pull: true
     
   ci:  
