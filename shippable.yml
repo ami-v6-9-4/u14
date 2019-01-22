@@ -7,22 +7,22 @@ build:
 
   pre_ci_boot:
     image_name: drydock/u14
-    image_tag: v6.8.4
+    image_tag: v6.9.4
     pull: true
     
   ci:  
     - python -V
     - pip --version
-    - aws --version #1.15.73
-    - eb --version #3.14.3
-    - gcloud version #211.0.0
-    - jfrog --version #1.18.0
+    - aws --version #1.16.14
+    - eb --version #3.14.6
+    - gcloud version #216.0.0
+    - jfrog --version #1.19.1
     - kubectl version --client #1.11.0
-    - packer version #1.2.5
-    - ansible --version #2.6.2
-    - terraform --version #0.11.7
+    - packer version #1.3.0
+    - ansible --version #2.6.4
+    - terraform --version #0.11.8
     - apt search azure-cli
-    - az --version #2.0.43
+    - az --version #2.0.45
     - EXPECTED_DOCKER_VERSION="17.06.0-ce"
     - |
       [ $(docker version --format {{.Server.Version}}) == "$EXPECTED_DOCKER_VERSION" ]
